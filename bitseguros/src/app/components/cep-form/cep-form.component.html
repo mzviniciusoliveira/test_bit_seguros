@@ -4,34 +4,25 @@
 </form>
 
 <div class="formViaCep" *ngIf="!boxHidden">
-  <div class="formViaCep__item">
-    <label class="label">Cep:</label>
-    <input class="input" value={{cep}} disabled />
-  </div>
-
-  <div class="formViaCep__item">
-    <label class="label">Bairro:</label>
-    <input class="input" value={{bairro}}/>
-  </div>
-
-  <div class="formViaCep__item">
-    <label class="label">Complemento:</label>
-    <input class="input" value={{complemento}}/>
-  </div>
-
-  <div class="formViaCep__item">
-    <label class="label">Localidade:</label>
-    <input class="input" value={{localidade}}/>
-  </div>
-
-  <div class="formViaCep__item">
-    <label class="label">Logradouro:</label>
-    <input class="input" value={{logradouro}}/>
-  </div>
-
-  <div class="formViaCep__item">
-    <label class="label">UF:</label>
-    <input class="input" value={{uf}}/>
+  <div class="res">
+    <div class="card">
+      <div class="title">
+        <p>Endereço do CEP inserido</p>
+      </div>
+      <div class="box">
+        <div class="box__img">
+          <img src="../../../assets/localization.png" alt="">
+        </div>
+        <div class="box__item">
+          <p>CEP: {{cep}}</p>
+          <p>Bairro: {{bairro}}</p>
+          <p>Complemento: {{complemento}}</p>
+          <p>Localidade: {{localidade}}</p>
+          <p>Logradouro: {{logradouro}}</p>
+          <p>UF: {{uf}}</p>
+        </div>
+    </div>
+    </div>
   </div>
 </div>
 

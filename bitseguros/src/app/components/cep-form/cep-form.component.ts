@@ -6,13 +6,14 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './cep-form.component.html',
   styleUrls: ['./cep-form.component.scss']
 })
+
 export class CepFormComponent implements OnInit {
 
   cepInput: number;
-  resultBox: object;
+  resultBox: any;
   cep: number;
   bairro: string;
-  complemento: object;
+  complemento: string;
   localidade: string;
   logradouro: string;
   uf: string;
@@ -26,8 +27,6 @@ export class CepFormComponent implements OnInit {
     this.http.get(apiUrl).subscribe((res) => {
       console.log(res);
       this.resultBox = res;
-
-
 
       this.cep = this.resultBox.cep;
       this.bairro = this.resultBox.bairro;
